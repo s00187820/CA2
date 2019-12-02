@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CA2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <ListBox x:Name="lbxActivities" HorizontalAlignment="Left" Height="191" Margin="126,88,0,0" VerticalAlignment="Top" Width="203" SelectionChanged="LbxActivities_SelectionChanged"/>
+        <ListBox x:Name="lbxSelectedActivities" HorizontalAlignment="Left" Height="190" Margin="521,88,0,0" VerticalAlignment="Top" Width="180"/>
+        <Button x:Name="btnSelect" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="380,132,0,0" VerticalAlignment="Top" Width="75" Click="BtnSelect_Click"/>
+        <Button x:Name="btnReturnActivites" Content="&lt;&lt;" HorizontalAlignment="Left" Margin="380,215,0,0" VerticalAlignment="Top" Width="75" Click="BtnReturnActivites_Click"/>
+        <RadioButton x:Name="RbAll" Content="All" HorizontalAlignment="Left" Margin="10,132,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked" Click="RbAll_Click"/>
+        <RadioButton x:Name="RbLand" Content="Land" HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
+        <RadioButton x:Name="RbWater" Content="Water" HorizontalAlignment="Left" Margin="10,203,0,0" VerticalAlignment="Top" Height="15" Checked="RadioButton_Checked" Click="RbAll_Click"/>
+        <RadioButton x:Name="RbAir" Content="Air" HorizontalAlignment="Left" Margin="10,242,0,0" VerticalAlignment="Top" Click="RbAll_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="98,333,0,0" TextWrapping="Wrap" Text="Description" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="126,30,0,0" TextWrapping="Wrap" Text="Activity Planner" VerticalAlignment="Top" FontSize="20" Width="178"/>
+        <TextBlock x:Name="tblkCost" HorizontalAlignment="Left" Margin="370,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="17"/>
+        <Label x:Name="lblDesc" Content="" HorizontalAlignment="Left" Margin="92,354,0,0" VerticalAlignment="Top"/>
+        <Label Content="Total Cost" HorizontalAlignment="Left" Margin="521,30,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="652,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="€"/>
+        <Label Content="All Activities" HorizontalAlignment="Left" Margin="126,61,0,0" VerticalAlignment="Top"/>
+        <Label Content="Selected Activities" HorizontalAlignment="Left" Margin="521,61,0,0" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
