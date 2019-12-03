@@ -31,9 +31,8 @@ namespace CA2
         {
             InitializeComponent();
         }
-
-       
-        //This method will run when the window loads
+      
+       //This method will run when the window loads
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // Create Activity items
@@ -120,9 +119,7 @@ namespace CA2
 
             Activity a4 = new Activity("Helicopter Tour", "Experience the ultimate in aerial sight-seeing as you tour the area in our modern helicopters", 200m, ActivityType.Air, DateTime.Now);
 
-
-            // Add to a list
-           
+            // Add to a list          
             activities.Add(a1);
             activities.Add(a2);
             activities.Add(a3);
@@ -134,8 +131,6 @@ namespace CA2
             activities.Add(l3);
 
             activities.Sort();
-
-
 
             //Display in List Boxs
             lbxActivities.ItemsSource = activities;
@@ -151,7 +146,6 @@ namespace CA2
         {
             //determine what has been selected
             Activity selected = lbxActivities.SelectedItem as Activity;
-
             //check that something has been selected
             if (selected != null)
             {
@@ -162,11 +156,10 @@ namespace CA2
                 selected_activities.Add(selected);
 
                 //update total cost
+                tblkTotal.Text = Convert.ToString(totalCost);
 
                 //refresh display
                 RefreshScreen();
-
-
             }
 
         }
@@ -185,10 +178,10 @@ namespace CA2
                 activities.Add(selected);
 
                 //update total cost
-
+                tblkTotal.Text = Convert.ToString(totalCost);
+               
                 //refresh display
                 RefreshScreen();
-
 
             }
         }
@@ -267,8 +260,6 @@ namespace CA2
                 lblDesc.Content = selected.Description;
 
             }
-
-
 
         }
     }
